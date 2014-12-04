@@ -1,0 +1,8 @@
+{
+    "address":        "10.0.0.30:8500",
+    "backends":       ["splunk_search_head=splunk_search_head@local_vagrant:8000"],
+    "dry_run":        false,
+    "paths":          ["/etc/haproxy/haproxy.cfg"],
+    "reload_command": "/etc/init.d/haproxy reload",
+    "templates":      ["/etc/haproxy/in.conf"]
+}

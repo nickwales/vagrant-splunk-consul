@@ -1,0 +1,10 @@
+{
+  "datacenter": "local_vagrant",
+  "data_dir": "/tmp/consul",
+  "advertise_addr": "<%= @ipaddress_eth1 %>",
+  "log_level": "INFO",
+  "node_name": "<%= @hostname %>",
+  "server": false,
+  "start_join":["10.0.0.30"],
+  "rejoin_after_leave": true
+}

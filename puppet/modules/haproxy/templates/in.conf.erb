@@ -1,0 +1,25 @@
+global
+    daemon
+    maxconn 256
+
+defaults
+    mode tcp
+    timeout connect 5000ms
+    timeout client 60000ms
+    timeout server 60000ms
+
+listen carbon-relay
+    bind *:80
+    {{range .splunk_search_head}}
+    {{.}} maxconn 32{{end}}
+
+
+listen stats :9000       #Listen on all IP's on port 9000
+    mode http
+    stats enable
+    balance
+    timeout client 5000
+    timeout connect 4000
+    timeout server 30000
+    stats uri /haproxy_stats
+    stats admin if TRUE
