@@ -19,4 +19,4 @@ TO-DO
 
 To enable the splunk search head clustering the cluster captain command needs to be run, it should look something like this:
 
-  /opt/splunk/bin/splunk bootstrap shcluster-captain -servers_list "https://10.0.0.11:8089, https://10.0.0.12:8089" -auth admin:changeme
+    /opt/splunk/bin/splunk bootstrap shcluster-captain -servers_list "https://10.0.0.11:8089, https://10.0.0.12:8089" -auth admin:changeme
